@@ -1,0 +1,29 @@
+@import '../../global.scss';
+
+
+li{
+    font-size: 14px;
+    margin-right: 50px;
+    padding:12px;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-bottom:25px;
+    text-align: center;
+    
+    @include Mobile-L{
+      margin-right: 30px;
+      overflow-x: initial;
+      margin-bottom: 19px;
+      text-align: left;
+    }
+
+    @include Mobile-M{
+      margin-bottom: 12px;
+
+    }
+
+      &.active{
+          background-color: $mainColor;
+          color: white;
+     }
+  }

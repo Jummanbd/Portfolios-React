@@ -1,0 +1,179 @@
+@import '../../global.scss';
+
+.works{
+    background-color:$gayColor;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    .arrow{
+        height: 50px;
+        position: absolute;
+        @include Mobile-L{
+          height: 45px;
+        }
+        @include Mobile-M{
+          bottom: 20px;
+          height: 35px;
+
+        }
+        &.left{
+            left: 100px;
+            transform: rotate(180deg);
+
+            @include Laptop{
+              left:50px;
+            }
+            
+            @include Mobile-L{
+              left: 10px;
+            }
+            @include Mobile-M{
+
+              left: 50%;
+              transform: translateX(-50%),rotate(180deg);
+              
+            }
+        }
+        &.right{
+            right: 100px;
+            @include Laptop{
+              right:50px;
+            } 
+
+            @include Mobile-L{
+              right: 10px;
+            }
+            @include Mobile-M{
+              right: 50%;
+              transform: translateX(-50%);
+              
+            }
+        }
+        &.acive{
+            background-color: wheat;
+        }
+    }
+
+    .slider{
+        height: 350px;
+        display: flex;
+        position: absolute;
+        left: 0;
+        transition: all 1s ease-out;
+        @include Mobile-L{
+          height: 100%;
+        }
+
+        .container{
+            width: 100vw;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+      
+            .item {
+              width: 700px;
+              height: 100%;
+              background-color: white;
+              border-radius: 20px;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              @include Tablet{
+                align-items: flex-start;
+                width: 520px;
+                height:100%;
+              }
+
+              @include Mobile-L{
+                align-items: flex-start;
+                width: 300px;
+                height:100%;
+                display: block;
+                height: 75%;
+              }
+
+              .left {
+                flex: 4;
+                height: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                @include Mobile-L{
+                  margin-top: 50px;
+                  height: auto;
+                }
+
+                .leftContainer {
+                  width: 90%;
+                  height: 55%;
+                  display: flex;
+                  flex-direction: column;
+                  justify-content: space-between;
+                  @include Mobile-L{
+                   height: auto;
+
+                  }
+                  .imgContainer {
+                    width: 40px;
+                    height: 40px;
+                    border-radius: 50%;
+                    background-color: rgb(245, 179, 155);
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+      
+      
+                    img {
+                      width: 25px;
+                    }
+                  }
+                  h2 {
+                    font-size: 20px;
+                    @include Mobile-L{
+                    margin: 20px 0;
+                    }
+                  }
+                  p {
+                    font-size: 13px;
+                    @include Mobile-L{
+                     margin-bottom: 20px;
+                    }
+                  }
+                  span {
+                    font-size: 12px;
+                    font-weight: 600;
+                    text-decoration: underline;
+                    cursor: pointer;
+                  }
+                }
+              }
+                .right{
+                    flex: 8;       
+                    height: 100%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    overflow: hidden;
+                    @include Mobile-L{
+                    height: auto;
+
+                  
+                    }
+                    img{
+                        width: 400px;
+                        transform: rotate(-10deg);
+                        @include Mobile-L{
+                         transform: initial;
+                         height:342px;
+                         width: 90%;
+                         margin-top: 30px;
+                        }
+                    }
+                }
+            }
+        }
+
+    }
+
+}
